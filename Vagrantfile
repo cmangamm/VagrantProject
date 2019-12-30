@@ -48,6 +48,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision:"ansible_local" do |ansible|
     ansible.playbook="playbook.yml"
     ansible.verbose=true
-	#ansible.groups={"nodes"=>["server[1:4]"],"group"=>"server5","group2"=>"server6"}
+	ansible.groups={"nodes"=>["server[1:4]"],"group"=>"server5","group2"=>"server6"}
   end
 end
